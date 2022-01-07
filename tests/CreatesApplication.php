@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace Arsam\Rmto\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmto\Contracts;
+namespace Arsam\Rmto\Contracts;
 
 use Exception;
 

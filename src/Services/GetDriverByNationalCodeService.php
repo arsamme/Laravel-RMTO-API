@@ -1,17 +1,17 @@
 <?php
 
-namespace Rmto\Services;
+namespace Arsam\Rmto\Services;
 
 use Exception;
-use Rmto\Contracts\RmtoService;
-use Rmto\Models\Driver;
+use Arsam\Rmto\Contracts\RmtoService;
+use Arsam\Rmto\Models\Driver;
 use SoapClient;
 
-class GetDriverDataService extends RmtoService
+class GetDriverByNationalCodeService extends RmtoService
 {
     private string $nationalCode;
 
-    function nationalCode($nationalCode): GetDriverDataService
+    function nationalCode($nationalCode): GetDriverByNationalCodeService
     {
         $this->nationalCode = $nationalCode;
         return $this;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Arsam\Rmto\Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

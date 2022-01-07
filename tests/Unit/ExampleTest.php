@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Arsam\Rmto\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 

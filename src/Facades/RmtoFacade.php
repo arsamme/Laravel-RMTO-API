@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmto\Facades;
+namespace Arsam\Rmto\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

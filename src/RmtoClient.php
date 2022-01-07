@@ -1,8 +1,8 @@
 <?php
-namespace Rmto;
 
-use HMD\Core\Kavenegar\Services\SendService;
-use HMD\Core\Kavenegar\Services\VerifyLookupService;
+namespace Arsam\Rmto;
+
+use Arsam\Rmto\Services\GetDriverByNationalCodeService;
 
 class RmtoClient
 {
@@ -33,18 +33,12 @@ class RmtoClient
         return $this;
     }
 
-    public function verifyLookup($receptor, $template): VerifyLookupService
+    public function getDriverByNationalCode($nationalCode): GetDriverByNationalCodeService
     {
-        return (new VerifyLookupService($this->apiKey, $this->insecure))
-            ->template($template)
-            ->receptor($receptor);
-    }
-
-    public function send($receptor, $message): SendService
-    {
-        return (new SendService($this->apiKey, $this->insecure))
-            ->line($this->defaultLine)
-            ->receptor($receptor)
-            ->message($message);
+        return (new GetDriverByNationalCodeService(
+            $this->username,
+            $this->password,
+            $this->apiKey)
+        )->nationalCode($nationalCode);
     }
 }

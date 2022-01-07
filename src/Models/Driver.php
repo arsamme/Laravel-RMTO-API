@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmto\Models;
+namespace Arsam\Rmto\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Sofa\Eloquence\Eloquence;

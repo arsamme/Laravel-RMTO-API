@@ -1,6 +1,6 @@
 <?php
 
-namespace Rmto;
+namespace Arsam\Rmto;
 
 use Illuminate\Support\ServiceProvider;
 

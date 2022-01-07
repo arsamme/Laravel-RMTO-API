@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Rmto\\": "src/"
+      "Arsam\\Rmto\\": "src/"
     },
     "files": [
       "src/helpers.php"
@@ -27,16 +27,16 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Rmto\\Tests\\": "tests"
+      "Arsam\\Rmto\\Tests\\": "tests"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Rmto\\RmtoServiceProvider"
+        "Arsam\\Rmto\\RmtoServiceProvider"
       ],
       "aliases": {
-        "Rmto": "Rmto\\Facades\\RmtoFacade"
+        "Rmto": "Arsam\\Rmto\\Facades\\RmtoFacade"
       }
     }
   },
