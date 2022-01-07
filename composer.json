@@ -1,5 +1,5 @@
 {
-  "name": "arsamme/rmto",
+  "name": "arsamme/laravel-rmto",
   "description": "Iran RMTO webservices.",
   "license": "MIT",
   "require": {
