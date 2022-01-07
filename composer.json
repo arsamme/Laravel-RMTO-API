@@ -33,7 +33,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "RmtoServiceProvider"
+        "Rmto\\RmtoServiceProvider"
       ],
       "aliases": {
         "Rmto": "Rmto\\Facades\\RmtoFacade"
