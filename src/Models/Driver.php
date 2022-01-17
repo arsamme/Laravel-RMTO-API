@@ -10,7 +10,7 @@ class Driver extends Model
 {
     use Eloquence, Mappable;
 
-    private array $data;
+    protected $guarded = [];
 
     private array $maps = [
         'document_number' => 'doc_number',

@@ -31,6 +31,7 @@ class GetDriverByNationalCodeService extends RmtoService
                 'IN_PASSWORD-VARCHAR2-IN' => $this->password,
                 'IN_SERVICEID-NUMBER-IN' => 3,
                 'IN_PARAM_1-VARCHAR2-IN' => $this->nationalCode,
+                'IN_PARAM_2-VARCHAR2-IN' => '',
                 'IN_PARAM_3-VARCHAR2-IN' => '',
                 'IN_PARAM_4-VARCHAR2-IN' => '',
                 'IN_PARAM_5-VARCHAR2-IN' => '',
@@ -41,9 +42,10 @@ class GetDriverByNationalCodeService extends RmtoService
                 'IN_PARAM_10-VARCHAR2-IN' => '',
             ]
         ];
-        $result = $client->__soapCall('RMTO_WEB_SERVICES', $data);
-        if (isset($result['RETURN'])) {
-            $result = $result['RETURN'];
+        $response = $client->__soapCall('RMTO_WEB_SERVICES', $data);
+        $response = json_decode(json_encode($response), true);
+        if (isset($response['RETURN'])) {
+            $result = $response['RETURN'];
             if ($result == -1 || $result == '-1') {
                 throw new Exception('Driver with this national code not found.');
             } else {

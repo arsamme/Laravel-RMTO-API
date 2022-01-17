@@ -25,6 +25,7 @@ class RmtoServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../config/rmto.php', 'rmto');
+        $this->mergeConfigFrom(__DIR__ . '/../config/constants.php', 'constants');
 
         $this->app->bind('rmto', function () {
             return new RmtoClient();

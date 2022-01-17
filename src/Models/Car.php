@@ -10,7 +10,8 @@ class Car extends Model
 {
     use Eloquence, Mappable;
 
-    private array $data;
+    protected $guarded = [];
 
     private array $maps = [];
+
 }
