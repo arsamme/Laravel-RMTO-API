@@ -2,6 +2,7 @@
 
 namespace Arsam\Rmto;
 
+use Arsam\Rmto\Services\GetCarBySmartNumber;
 use Arsam\Rmto\Services\GetDriverByNationalCodeService;
 
 class RmtoClient
@@ -40,5 +41,14 @@ class RmtoClient
             $this->password,
             $this->apiKey)
         )->nationalCode($nationalCode);
+    }
+
+    public function getCarBySmartNumber($smartNumber): GetCarBySmartNumber
+    {
+        return (new GetCarBySmartNumber(
+            $this->username,
+            $this->password,
+            $this->apiKey)
+        )->smartNumber($smartNumber);
     }
 }
